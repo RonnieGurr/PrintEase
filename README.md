@@ -68,7 +68,13 @@ Detection Method: File or Folder Exist.
 
 ## Adding Printers
 
-Now the print driver has been succesfulyl deployed you can go ahead and connect to a shared printer without the need for administrator rights. 
+Now the print driver has been successfully deployed you can go ahead and connect to a network/shared printer without the need for administrator rights.
+
+You can also use the ```Add-Printer``` cmdlet to connect to the shared printer.
+
+```Powershell
+Add-Printer -ConnectionName "\\printServer\printerName"
+```
 
 ### Adding a none-shared printer. 
 
@@ -78,3 +84,5 @@ To add a none shared printer you can use the ```Add-PrinterPort``` and the ```Ad
 Add-PrinterPort -Name "PORT NAME (USALLY PRINTER IP)" -PrinterHostAddress "PRINTER IP"
 Add-Printer -Name "PRINTER NAME" -DriverName "PRINT DRIVER NAME" -PortName "YOUR PORT NAME"
 ```
+
+If you're planning on creating a secondary script or using other software to connect to the printers, I would recommend adding the driver script as a dependency. This will ensure the drivers are installed prior to trying to connect to the printer.
