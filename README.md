@@ -65,3 +65,16 @@ Path/Code: C:\Windows\System32\DriverStore\FileRepository\YOUR PRINT DRIVER INST
 File or Folder Name: PRINT DRIVER INF FILE.
 Detection Method: File or Folder Exist.
 ```
+
+## Adding Printers
+
+Now the print driver has been succesfulyl deployed you can go ahead and connect to a shared printer without the need for administrator rights. 
+
+### Adding a none-shared printer. 
+
+To add a none shared printer you can use the ```Add-PrinterPort``` and the ```Add-Printer``` cmdlet. 
+
+```Powershell
+Add-PrinterPort -Name "PORT NAME (USALLY PRINTER IP)" -PrinterHostAddress "PRINTER IP"
+Add-Printer -Name "PRINTER NAME" -DriverName "PRINT DRIVER NAME" -PortName "YOUR PORT NAME"
+```
