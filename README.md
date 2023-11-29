@@ -48,7 +48,7 @@ Configure Packaging:
 ```Powershell
 Please specify the source folder: Input
 Please specify the setup file: Input\Install.ps1
-Please specify the output folder: Output.
+Please specify the output folder: Output
 ```
 You can now deploy the install.intunewin package via Intune.
 
