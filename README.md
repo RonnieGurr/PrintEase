@@ -1,4 +1,4 @@
-# PrinterEase
+# PrintEase
 
 Install print drivers on Windows devices using PowerShell. This script can also be used with the Win32 Prep Tool to deploy via Intune.
 
