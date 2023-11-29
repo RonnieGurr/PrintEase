@@ -86,3 +86,15 @@ Add-Printer -Name "PRINTER NAME" -DriverName "PRINT DRIVER NAME" -PortName "YOUR
 ```
 
 If you're planning on creating a secondary script or using other software to connect to the printers, I would recommend adding the driver script as a dependency. This will ensure the drivers are installed prior to trying to connect to the printer.
+
+## PaperCut
+
+For those who are using PaperCut, I would recommend configuring PaperCut Print Deploy. This piece of software will allow your user to connect to network printers automatically, once the print drivers have been installed. 
+
+The software can also be deployed via Intune, if you choose to deploy it this way, please ensure you have setup dependencies.
+
+### Authentication
+
+Some users may have trouble connecting to the print server if they use Windows Hello to login. I would recommend enforcing all managed devices to use a password, this will ensure your users can connect to the print server. 
+
+For those who use BYOD, look into PaperCut Moblity Print.
