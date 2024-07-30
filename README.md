@@ -89,12 +89,8 @@ If you're planning on creating a secondary script or using other software to con
 
 ## PaperCut
 
-For those who are using PaperCut, I would recommend configuring PaperCut Print Deploy. This piece of software will allow your user to connect to network printers automatically, once the print drivers have been installed. 
+For those who are using PaperCut, I would recommend configuring PaperCut Print Deploy. This piece of software will allow your user to connect to network printers automatically.
 
 The software can also be deployed via Intune, if you choose to deploy it this way, please ensure you have setup dependencies.
 
-### Authentication
-
-Some users may have trouble connecting to the print server if they use Windows Hello to login. I would recommend enforcing all managed devices to use a password, this will ensure your users can connect to the print server. 
-
-For those who use BYOD, look into PaperCut Moblity Print.
+For BYOD you can deploy Print Deploy in combination with Mobility Print queues, users will be requested to authenticate when they first install the queues. 
